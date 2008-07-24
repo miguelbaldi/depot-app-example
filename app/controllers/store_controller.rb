@@ -31,7 +31,7 @@ class StoreController < ApplicationController
 
 	# Empty shopping cart
   def empty_cart
-    session[:cart] = nil # one comment
+    session[:cart] = nil
     redirect_to_index unless request.xhr?
   end
 

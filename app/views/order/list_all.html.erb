@@ -1,0 +1,38 @@
+<h1>Listing <%= pluralize(@orders, "order" ) %></h1>
+
+<table class="ordersTable" cellpadding="5" cellspacing="0" >
+	<thead>
+				<tr>
+					<th scope="col">Id:</th>
+					<th scope="col">Client name:</th>
+					<th scope="col">Client address:</th>
+					<th scope="col">E-mail:</th>
+					<th scope="col">Total price:</th>
+				</tr>
+	</thead>
+	<tbody>
+<% i = 0%>
+<% for order in @orders %>
+	<tr>
+		<th scope="row">
+			<%= order.id %>
+		</th>
+		<td>
+			<%= order.name %>
+		</td>
+		<td>
+			<%= order.address %>
+		</td>
+		<td>
+			<%= order.email %>
+		</td>
+		<td>
+			<%= order.line_items[i].total_price unless order.line_items[i].nil? %>
+		</td>
+	</tr>
+<% 
+i += 1
+end %>
+</tbody>
+</table>
+

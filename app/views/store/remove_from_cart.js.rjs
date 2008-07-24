@@ -1,0 +1,6 @@
+page.replace_html("cart" , :partial => "cart" , :object => @cart)
+unless @current_item.quantity < 1
+page[:current_item].visual_effect :highlight,
+			:startcolor => "#88ff88" ,
+				:endcolor => "#114411"
+end

@@ -1,0 +1,18 @@
+<% unless cart.items.empty? %>
+<div class="cart-title" >Your Cart</div>
+<table>
+	<%= render(:partial => "cart_item" , :collection => cart.items) %>
+	<tr class="total-line" >
+		<td colspan="2" >Total</td>
+		<td class="total-cell" ><%= number_to_currency(cart.total_price) %></td>
+	</tr>
+	<tr>
+		<td colspan="3">
+			<% form_remote_tag :url => { :action => :empty_cart } do %>
+				<%= submit_tag "Empty cart" %>
+			<% end %>
+			<br>
+			<%= button_to "Checkout" , :action => :checkout unless @order %>
+	</tr>
+</table>
+<% end %>

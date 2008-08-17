@@ -14,7 +14,7 @@ class StoreController < ApplicationController
 
   def add_to_cart
     begin
-      product = Product.find (params[:id])
+      product = Product.find(params[:id])
     rescue ActiveRecord::RecordNotFound
       logger.error("Attempt to access invalid product #{params[:id]}")
       redirect_to_index "Invalid product"
@@ -37,7 +37,7 @@ class StoreController < ApplicationController
 
   def remove_from_cart
     begin
-      product = Product.find (params[:id])
+      product = Product.find(params[:id])
     rescue ActiveRecord::RecordNotFound => e
       logger.error("Attempt to access invalid product #{params[:id]}")
       redirect_to_index "Invalid product"

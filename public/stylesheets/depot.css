@@ -225,4 +225,11 @@ h1 {
   font-size: 12px;
   list-style: square;
 }
-
+.pagination {
+	height: 50px;
+}
+.pagination span:hover {
+}
+.pagination a:hover {
+	background-color: #BBFFBB;
+}

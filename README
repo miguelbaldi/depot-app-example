@@ -3,3 +3,8 @@
 # This application is totally based on agile web development with rails book's.
 # Feel free to use or modify this code, or even use that for support your studies.
 #
+# Added will_paginate support, so you must install will_paginate plugin or gem.
+#
+# For gem install, follow these steps (on a linux machine (debian-based)):
+# shell>gem sources -a http://gems.github.com
+# shell>sudo gem1.8 install mislav-will_paginate

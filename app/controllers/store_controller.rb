@@ -3,7 +3,7 @@ class StoreController < ApplicationController
 	before_filter :find_cart, :except => :empty_cart
 
   def index
-    @products = Product.find_products_for_sale
+    @products = Product.paginate :page => params[:page], :per_page => 3
     if session[:index_counter].nil?
       session[:index_counter] = 1
     else

@@ -5,6 +5,6 @@
 #
 # Added will_paginate support, so you must install will_paginate plugin or gem.
 #
-# For gem install, follow these steps (on a linux machine (debian-based)):
+# For gem install, follow these steps (tested on a linux machine (debian-based)):
 # shell>gem sources -a http://gems.github.com
-# shell>sudo gem1.8 install mislav-will_paginate
+# shell>sudo gem install mislav-will_paginate
